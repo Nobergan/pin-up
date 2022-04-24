@@ -1,0 +1,503 @@
+.hero {
+    position: relative;
+    padding: 65px 0;
+
+    background-image: url('../../img/bg-img-desk.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+
+    @include for-size(tablet-only) {
+        padding: 35px 0 55px;
+
+        background-image: url('../../img/bg-img-mob.png');
+    }
+
+    & .container {
+        position: relative;
+        z-index: 100;
+    }
+
+    &__logo {
+        width: 250px;
+        height: 85px;
+        margin-bottom: 60px;
+        cursor: pointer;
+
+        @include for-size(tablet-only) {
+            display: block;
+            width: 140px;
+            height: 50px;
+
+            margin: 0 auto 250px;
+        }
+    }
+
+    // HERO TITLE
+
+    &__top-title {
+        @include flex(flex, center, unset, unset);
+        flex-direction: row;
+
+        width: 703px;
+        height: 90px;
+        padding: 0 20px;
+        margin: 0 0 6px;
+
+        @include font(900, 54px, 1.2);
+
+        color: #FF4020;
+        background: #FFFFFF;
+        box-shadow: 0px 6px 20px rgb(0 0 0 / 25%);
+
+        transform: matrix(1, -0.12, 0, 0.99, 0, 0);
+
+
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 335px;
+            max-height: 53px;
+
+            margin: 0 auto;
+            padding: 5px 20px;
+
+            @include font(900, 23px, 1.2);
+        }
+    }
+
+    &__bottom-title {
+        @include flex(flex, center, unset, unset);
+
+        width: 584px;
+        height: 71px;
+        padding: 0 20px;
+        margin: 0 0 66px;
+
+        @include font(900, 44px, 1.2);
+
+        background-color: #00CFA6;
+        transform: matrix(1, -0.12, 0, 0.99, 0, 0);
+
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 280px;
+            max-height: 43px;
+
+            margin: 0 auto 60px;
+            padding: 5px 20px;
+
+            @include font(900, 19px, 1.2);
+        }
+    }
+}
+
+// HERO BUTTON
+.hero__btn {
+    padding: 23px 61px;
+    margin: 0 0 56px;
+
+    @include font(900, 26px, 1.1);
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    background: #FF2400;
+    border-radius: 10px;
+    z-index: 150;
+
+    @include for-size(tablet-only) {
+        width: 100%;
+        max-width: 335px;
+        padding: 13px 35px;
+        margin: 0 auto 15px;
+
+        @include font(900, 20px, 1.1);
+
+        box-shadow: 0px 4px 15px rgba(255, 36, 0, 0.55);
+        border-radius: 5px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        padding: 23px 68px;
+
+        filter: drop-shadow(0px 4px 25px rgba(255, 36, 0, 0.7));
+
+        @include for-size(tablet-only) {
+            padding: 13px 35px;
+        }
+    }
+}
+
+// DESK BONUS LINK 
+.hero__bonus-link {
+
+    @include for-size(tablet-only) {
+        @include font(400, 17px, 1.2);
+        text-decoration: underline;
+        text-transform: uppercase;
+
+        color: #000000;
+    }
+
+    &-box {
+        display: none;
+
+        @include for-size(tablet-only) {
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+// HERO LIST
+.hero__list {
+    display: flex;
+
+    @include for-size(tablet-only) {
+        @include position(absolute, 115px, unset, unset, 50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+.hero__list-item {
+    @include flex(flex, center, unset, unset);
+    margin: 0 25px 0 0;
+
+    @include font(500, 20px, 1);
+
+    color: #051115;
+
+    @include for-size(tablet-only) {
+        margin: 0 7px 0 0;
+        @include font(500, 10px, 1);
+        color: #ffffff;
+    }
+
+    &::before {
+        content: '';
+        width: 52px;
+        height: 52px;
+
+        @include for-size(tablet-only) {
+            width: 23px;
+            height: 23px;
+            fill: #ffffff;
+        }
+    }
+
+    &:nth-child(1)::before {
+        margin-right: 12px;
+        background-image: url('../../img/hero/сoeff.svg');
+
+        @include for-size(tablet-only) {
+            margin-right: 5px;
+            background-image: url('../../img/hero/сoeff-mob.svg');
+        }
+    }
+
+    &:nth-child(2)::before {
+        margin-right: 12px;
+        background-image: url('../../img/hero/lines.svg');
+
+        @include for-size(tablet-only) {
+            margin-right: 5px;
+            background-image: url('../../img/hero/lines-mob.svg');
+        }
+    }
+
+    &:nth-child(3)::before {
+        margin-right: 14px;
+        background-image: url('../../img/hero/money.svg');
+
+        @include for-size(tablet-only) {
+            margin-right: 5px;
+            background-image: url('../../img/hero/money-mob.svg');
+        }
+    }
+}
+
+// DESK AND MOB PLAYER IMAGE
+.hero__img {
+    @include position(absolute, unset, 0, 0, unset);
+    height: 100%;
+    z-index: 10;
+
+    @include for-size(tablet-only) {
+        display: none;
+    }
+
+    &-mob {
+        display: none;
+
+        @include for-size(tablet-only) {
+            display: block;
+            width: 100%;
+
+            @include position(absolute, 153px, unset, unset, 50%);
+            transform: translate(-50%);
+        }
+    }
+}
+
+// FOG
+#myCanvas {
+    @include position(absolute, unset, unset, 0, unset);
+    height: 600px;
+    width: 100%;
+    z-index: 0;
+
+    @include for-size(tablet-only) {
+        height: 300px;
+    }
+}
+
+// BACKDROP
+.backdrop {
+    @include position(fixed, unset, unset, 0, 0);
+    min-width: 100%;
+    height: 100%;
+
+    padding: 93px 15px;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    overflow-y: auto;
+    z-index: 1000;
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &.is-hidden .modal {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+// MODAL
+.modal {
+    @include position(absolute, 50%, unset, unset, 50%);
+    width: 400px;
+
+    background: #FFFFFF;
+    border-radius: 5px 0px 5px 5px;
+
+    overflow-y: auto;
+    z-index: 100;
+
+    transform: translate(-50%, -50%) scale(1);
+
+    @include for-size(tablet-only) {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    &__header {
+        position: relative;
+
+        padding: 16px;
+        margin: 0;
+
+        text-align: center;
+
+        background-color: #FF2400;
+    }
+
+    &__title {
+        margin: 0;
+
+        @include font(900, 18px, 1.2);
+
+        color: #FFFFFF;
+    }
+
+    &__icon-close {
+        @include position(absolute, 20px, 16px, unset, unset);
+        width: 15px;
+        height: 15px;
+
+        cursor: pointer;
+    }
+}
+
+// FORM
+.form {
+    padding: 24px 46px 16px;
+
+    text-align: center;
+
+    @include for-size(tablet-only) {
+        padding: 20px;
+    }
+
+    &__box {
+        padding-bottom: 16px;
+        border-bottom: 1px solid #000000;
+    }
+
+    &__title {
+        margin: 0 0 16px;
+
+        @include font(700, 17px, 1.2);
+
+        color: rgba(19, 21, 22, 0.87);
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 12px;
+
+        @include font(900, 16px, 1.2);
+
+        color: #FFFFFF;
+        background: #FF2400;
+        border-radius: 2px;
+    }
+
+    &__btn:hover,
+    &__btn:focus,
+    &__btn:active {
+        filter: drop-shadow(0px 4px 25px rgba(255, 36, 0, 0.7));
+    }
+}
+
+// FORM PHONE INPUT
+.form__custom-input {
+    position: relative;
+    margin: 0 0 16px;
+
+    &:before {
+        content: '';
+        @include position(absolute, 0, unset, 0, 16px);
+        margin: auto 0;
+        width: 30px;
+        height: 20px;
+        background: url('../../img/hero/flag.svg') no-repeat;
+        background-size: cover;
+    }
+
+    & .label {
+        @include position(absolute, -24px, unset, unset, 16px);
+
+        padding: 3px;
+
+        @include font(400, 12px, 1.2);
+
+        color: rgba(112, 112, 112, 0.8);
+        background-color: #ffffff;
+    }
+
+    & .form__input {
+        width: 100%;
+        padding: 11px 50px;
+
+        @include font(400, 15px, 1.2);
+
+        color: #131516;
+
+        border: 1px solid #A9A8A8;
+        border-radius: 4px;
+    }
+
+    & .form__input::placeholder {
+        @include font(400, 15px, 1.2);
+
+        color: rgba(112, 112, 112, 0.5);
+    }
+
+    & .form__input:focus {
+        border: 1px solid green;
+        outline: none;
+        box-shadow: none;
+    }
+
+    & .form__input:not(:placeholder-shown) {
+        border: 1px solid green;
+    }
+}
+
+// FORM CHECKBOXES
+.form__checks {
+    text-align: left;
+    padding: 16px 0 0 0;
+
+    & label {
+        @include font(400, 12px, 1.2);
+
+        @include flex(flex, center, unset, unset);
+
+        color: #707070;
+    }
+
+    & a {
+        margin: 0 0 0 4px;
+        color: #FF2400;
+        text-decoration: underline;
+
+    }
+}
+
+.form__checkbox {
+    position: absolute;
+
+    z-index: -1;
+    opacity: 0;
+
+    &+label {
+        @include flex(inline-flex, center, unset, unset);
+    }
+
+    &+label:not(:last-child) {
+        margin: 0 0 10px;
+    }
+
+    &+label::before {
+        content: '';
+        width: 15px;
+        height: 15px;
+
+        margin: 0 8px 0 0;
+
+        background: #FBFBFB;
+        border: 1px solid #E4E4E4;
+        border-radius: 3px;
+
+    }
+
+    &:checked+label::before {
+        background-image: url("../../img/hero/check.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+// FOR BIG SCREENS
+@media screen and (min-width: 1500px) {
+    .hero {
+        height: 100vh;
+        padding: 165px 0 170px;
+    }
+
+    .container {
+        max-width: 1300px;
+    }
+
+    .hero__logo {
+        margin-bottom: 80px;
+    }
+
+    .hero__bottom-title {
+        margin: 0 0 100px;
+    }
+
+    .hero__btn {
+        margin: 0 0 76px;
+    }
+}

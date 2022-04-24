@@ -1,0 +1,82 @@
+<section class="hero">
+    <div class="container">
+
+        <!-- LOGO -->
+        <a href="index.html">
+            <svg class="hero__logo">
+                <use href="../img/sprite.svg#icon-logo"></use>
+            </svg>
+        </a>
+
+        <!-- TITLE -->
+        <h1 class="hero__top-title">БОНУС до 30 000 RUB</h1>
+        <h2 class="hero__bottom-title">ФРИБЕТ до 3 000 RUB</h2>
+
+        <button type="button" class="hero__btn">ПОЛУЧИТЬ БОНУС</button>
+
+        <!-- DESK LINK -->
+        <div class="hero__bonus-link-box">
+            <a href="index.html" target="_blank" class="hero__bonus-link">БОНУСНЫЕ УСЛОВИЯ</a>
+        </div>
+
+        <!-- DESKTOP LIST -->
+        <ul class="hero__list list">
+            <li class="hero__list-item">Высокие<br> коэффициенты</li>
+            <li class="hero__list-item">Максимальная<br> роспись линии</li>
+            <li class="hero__list-item">Быстрые<br> выплаты</li>
+        </ul>
+
+    </div>
+
+    <!-- PLAYER DESK IMAGE -->
+    <img src="../img/hero/player-img-desk.png" id="x" alt="" class="hero__img">
+    <img src="../img/hero/player-img-mob.png" id="x" alt="" class="hero__img-mob">
+
+    <!-- BOTTOM FOG -->
+    <canvas id="myCanvas" height="200" width="800" style="background-color: transparent;"></canvas>
+
+
+</section>
+
+<!-- MODAL -->
+<div class="backdrop is-hidden container" data-modal>
+    <div class="modal">
+
+        <!-- MODAL TOP -->
+        <div class="modal__header">
+            <p class="modal__title">
+                Регистрация
+            </p>
+
+            <svg class="modal__icon-close" data-modal-close>
+                <use href="../img/sprite.svg#icon-form-exit"></use>
+            </svg>
+        </div>
+
+        <!-- FORM -->
+        <form class="form">
+            <!-- FORM TOP -->
+            <div class="form__box">
+                <h3 class="form__title">Введите номер своего телефона</h3>
+
+                <div class="form__custom-input">
+                    <p class="label">Номер телефона</p>
+                    <input type="text" class="form__input" placeholder="(xxx) xxx-xxxx">
+                </div>
+
+                <button type="button" class="form__btn">Забрать бонус</button>
+            </div>
+
+            <!-- FORM BOTTOM -->
+            <div class="form__checks">
+                <!-- CHECKBOX 1 -->
+                <input type="checkbox" class="form__checkbox" id="policy" name="happy">
+                <label for="policy">Я согласен с <a href="index.html" target="_blank">правилами и условиями</a></label>
+
+                <!-- CHECKBOX 2 -->
+                <input type="checkbox" class="form__checkbox" id="message" name="happy">
+                <label for="message">Я согласен с правилами и условиями</label>
+            </div>
+        </form>
+    </div>
+</div>
